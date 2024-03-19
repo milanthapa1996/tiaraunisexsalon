@@ -98,7 +98,7 @@ const Services = () => {
 
         <div className="grid grid-cols-1 gap-4 mt-12 lg:mt-16 xl:gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {Services.map((data, index) => (
-            <div key={index} className="relative h-80 w-96  cursor-pointer">
+            <div key={index} className="relative h-80  cursor-pointer">
               <Image
                 src={data.imgSrc}
                 alt={`${data.title}-image`}
