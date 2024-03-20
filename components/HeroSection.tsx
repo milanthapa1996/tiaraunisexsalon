@@ -5,13 +5,13 @@ import React from "react";
 
 const HeroSection = () => {
   const openingHours = [
-    { day: "Sunday", time: "10:00 AM - 6:00 PM" },
+    { day: "Sunday", time: "9:00 AM - 8:00 PM" },
     { day: "Monday", time: "9:00 AM - 8:00 PM" },
     { day: "Tuesday", time: "9:00 AM - 8:00 PM" },
     { day: "Wednesday", time: "9:00 AM - 8:00 PM" },
     { day: "Thursday", time: "9:00 AM - 8:00 PM" },
-    { day: "Friday", time: "9:00 AM - 9:00 PM" },
-    { day: "Saturday", time: "Closed" },
+    { day: "Friday", time: "9:00 AM - 8:00 PM" },
+    { day: "Saturday", time: "** Closed **" },
   ];
 
   const currentDay = new Date().toLocaleDateString("en-US", {
@@ -20,12 +20,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative">
-      <Image
-        src="/bg.jpg"
-        alt="bg image"
-        fill
-        className="absolute inset-0 object-cover"
-      />
+      <Image src="/bg.jpg" alt="bg image" fill className="object-cover" />
       <div className="relative bg-slate-700 bg-opacity-40">
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="flex flex-col items-center justify-between xl:flex-row">
@@ -41,10 +36,11 @@ const HeroSection = () => {
                 your best.
               </p>
               <Link
-                href={"#"}
-                className="bg-[#CCA690] hover:bg-[#daa484] border border-white p-4 rounded-sm text-white flex items-center w-fit group shadow-lg shadow-[#CCA690]"
+                href={"#contact-us"}
+                className="bg-[#CCA690] hover:bg-[#daa484] border border-white p-2 lg:p-4 rounded-sm text-white flex items-center w-fit group shadow-lg shadow-[#CCA690]"
               >
-                BOOK AN APPOINTMENT <ArrowRightIcon className="h-6 w-6 ml-2 group-hover:translate-x-1 duration-300"/>
+                BOOK AN APPOINTMENT{" "}
+                <ArrowRightIcon className="h-6 w-6 ml-2 group-hover:translate-x-1 duration-300" />
               </Link>
             </div>
             <div className="w-full max-w-xl xl:px-8 xl:w-5/12">

@@ -9,67 +9,53 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
+import { HamburgerMenuIcon, Cross1Icon, ArrowRightIcon } from "@radix-ui/react-icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center h-16 max-w-7xl mx-auto px-4 sticky inset-0 z-50 bg-white">
+    <nav className="flex justify-between items-center h-20 max-w-7xl mx-auto sticky inset-0 z-50 bg-white shadow-md pr-2">
       {/* Menu items for larger screens */}
       <Link href="/">
-        {/* <Image
-          src="/logofinal.svg"
+        <Image
+          src="/logo.png"
           alt="Logo"
           height={100}
-          width={90}
+          width={120}
           quality={100}
-          className="p-1"
-        /> */}
-        <span className="text-2xl font-bold">Tiara Unisex Salon</span>
+          className="pt-10"
+        />
       </Link>
       <div className="hidden md:inline-block">
         <ul className="flex items-center space-x-4 *:font-medium *:tracking-tight hover:*:bg-slate-100 *:px-2 *:py-1 *:rounded-lg *:cursor-pointer">
+          <Link href={"/"}>
             <li>Home</li>
+          </Link>
+          <Link href={"#about"}>
             <li>About</li>
+          </Link>
+          <Link href={"#services"}>
             <li>Services</li>
+          </Link>
+          <Link href={"#gallery"}>
             <li>Gallery</li>
+          </Link>
+          <Link href={"#teams"}>
+            <li>Teams</li>
+          </Link>
+          <Link href={"#contact-us"}>
             <li>Contact Us</li>
+          </Link>
         </ul>
       </div>
       <div className="hidden md:flex  space-x-4 items-center">
-        <ul className="flex items-center justify-start space-x-2 *:opacity-60 hover:*:opacity-100 hover:*:scale-105 duration-300">
-          <li>
-            <Image src={"/fb.svg"} alt="Facebook Icon" width={25} height={30} />
-          </li>
-          <li>
-            <Image
-              src={"/insta.svg"}
-              alt="Facebook Icon"
-              width={25}
-              height={30}
-            />
-          </li>
-          <li>
-            <Image
-              src={"/twt.svg"}
-              alt="Facebook Icon"
-              width={25}
-              height={30}
-            />
-          </li>
-          <li>
-            <Image
-              src={"/whatsapp.svg"}
-              alt="Facebook Icon"
-              width={25}
-              height={30}
-            />
-          </li>
-          <li>
-            <Image src={"/yt.svg"} alt="Facebook Icon" width={25} height={30} />
-          </li>
-        </ul>
-        <Button variant={"outline"} className="bg-[#CCA690] hover:bg-[#daa484] text-white hover:text-white">Book Now</Button>
+        <Link
+          href={"#contact-us"}
+          className="bg-[#CCA690] hover:bg-[#daa484] p-2 rounded-sm text-white flex items-center w-fit group shadow-sm shadow-[#CCA690]"
+        >
+          BOOK AN APPOINTMENT{" "}
+          <ArrowRightIcon className="h-6 w-6 ml-2 group-hover:translate-x-1 duration-300" />
+        </Link>
       </div>
 
       {/* Mobile menu button */}

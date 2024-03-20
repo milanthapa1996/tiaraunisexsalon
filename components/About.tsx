@@ -3,7 +3,7 @@ import { ScissorsIcon,LayersIcon, GearIcon } from "@radix-ui/react-icons";
 
 const About = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20" id="about">
       <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
         <div>
           <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -38,7 +38,7 @@ const About = () => {
           </span>{" "}
           to Tiara Unisex Salon
         </h2>
-        <p className="text-base text-gray-700 md:text-lg">
+        <p className="mb-9 text-base leading-relaxed text-body-color">
           Discover the perfect blend of style, comfort, and expertise at Tiara
           Unisex Salon. With a team of talented stylists and a commitment to
           excellence, we're here to make you look and feel your best.
@@ -109,7 +109,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
