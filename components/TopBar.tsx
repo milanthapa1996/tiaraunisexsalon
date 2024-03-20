@@ -35,7 +35,7 @@ export const TopBar = () => {
           {dayOfWeek} | {date} | {time}
         </span>
       </div>
-      <ul className="flex items-center justify-start space-x-4">
+      <ul className="hidden md:flex items-center justify-start space-x-4">
         <li>
           <Image
             src={"/fb.svg"}

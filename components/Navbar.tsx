@@ -9,7 +9,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HamburgerMenuIcon, Cross1Icon, ArrowRightIcon } from "@radix-ui/react-icons";
+import {
+  HamburgerMenuIcon,
+  Cross1Icon,
+  ArrowRightIcon,
+} from "@radix-ui/react-icons";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,19 +35,19 @@ const Navbar = () => {
           <Link href={"/"}>
             <li>Home</li>
           </Link>
-          <Link href={"#about"}>
+          <Link href={"/#about"}>
             <li>About</li>
           </Link>
-          <Link href={"#services"}>
+          <Link href={"/#services"}>
             <li>Services</li>
           </Link>
-          <Link href={"#gallery"}>
+          <Link href={"/#gallery"}>
             <li>Gallery</li>
           </Link>
-          <Link href={"#teams"}>
+          <Link href={"/#teams"}>
             <li>Teams</li>
           </Link>
-          <Link href={"#contact-us"}>
+          <Link href={"/#contact-us"}>
             <li>Contact Us</li>
           </Link>
         </ul>
@@ -94,38 +98,68 @@ const Navbar = () => {
         </div>
         {/* Navigation links for mobile */}
         <div className="p-4 space-y-2 flex flex-col justify-center items-start bg-white">
-          <Link href="/" className="text-sm font-medium border-b w-full py-3">
+          <Link
+            href="/"
+            className="text-sm font-medium border-b w-full py-3"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </Link>
-          <Accordion type="single" collapsible className="w-full">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Is it accessible?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It adheres to the WAI-ARIA design pattern.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Is it styled?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It comes with default styles that matches the other
-                components&apos; aesthetic.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Is it animated?</AccordionTrigger>
-              <AccordionContent>
-                Yes. It's animated by default, but you can disable it if you
-                prefer.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <Link
+            href="/#about"
+            className="text-sm font-medium border-b w-full py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            href="/#services"
+            className="text-sm font-medium border-b w-full py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            Services
+          </Link>
+          <Link
+            href="/#gallery"
+            className="text-sm font-medium border-b w-full py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            Gallery
+          </Link>
+          <Link
+            href="/#teams"
+            className="text-sm font-medium border-b w-full py-3"
+            onClick={() => setIsOpen(false)}
+          >
+            Teams
+          </Link>
+          <Link href="/#contact-us" className="text-sm font-medium w-full py-3" onClick={() => setIsOpen(false)}>
+            Contact Us
+          </Link>
         </div>
         <div className="p-4">
           <ul className="grid grid-cols-2 gap-4 font-medium">
-            <li>Privacy Policy</li>
-            <li>About</li>
-            <li>Contact Us</li>
-            <li>Terms & Conditions</li>
+            <Link
+              href="/privacy-policy"
+              className="text-sm font-medium w-full py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms-and-conditions"
+              className="text-sm font-medium w-full py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Terms & Conditions
+            </Link>
+            <Link
+              href="/disclaimer"
+              className="text-sm font-medium w-full py-3"
+              onClick={() => setIsOpen(false)}
+            >
+              Disclaimer
+            </Link>
           </ul>
         </div>
         <div className="p-4">

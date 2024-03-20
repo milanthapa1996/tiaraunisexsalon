@@ -19,7 +19,7 @@ const Footer = () => {
             />
           </Link>
 
-          <div className="flex flex-wrap justify-center mt-6 -mx-4 *:font-medium">
+          <div className="flex flex-wrap justify-center mt-8 -mx-4 *:font-medium">
             <Link
               href="/"
               className="mx-4 text-sm text-white transition-colors duration-300 hover:text-slate-600 "
@@ -30,7 +30,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href="#about"
+              href="/#about"
               className="mx-4 text-sm text-white transition-colors duration-300 hover:text-slate-600 "
               aria-label="About"
             >
@@ -39,7 +39,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href="#services"
+              href="/#services"
               className="mx-4 text-sm text-white transition-colors duration-300 hover:text-slate-600"
               aria-label="Services"
             >
@@ -47,7 +47,7 @@ const Footer = () => {
               Services{" "}
             </Link>
             <Link
-              href="#gallery"
+              href="/#gallery"
               className="mx-4 text-sm text-white transition-colors duration-300 hover:text-slate-600"
               aria-label="Gallery"
             >
@@ -55,7 +55,7 @@ const Footer = () => {
               Gallery{" "}
             </Link>
             <Link
-              href="#teams"
+              href="/#teams"
               className="mx-4 text-sm text-white transition-colors duration-300 hover:text-slate-600 "
               aria-label="Teams"
             >
@@ -63,7 +63,7 @@ const Footer = () => {
               Teams{" "}
             </Link>
             <Link
-              href="#contact-us"
+              href="/#contact-us"
               className="mx-4 text-sm text-white transition-colors duration-300 hover:text-slate-600 "
               aria-label="Contact"
             >
@@ -104,7 +104,7 @@ const Footer = () => {
             © Copyright 2024. All Rights Reserved.
           </p>
 
-          <ul className="flex items-center justify-start space-x-4">
+          <ul className="flex items-center justify-start space-x-4 mt-2 md:mt-0">
             <li>
               <Image
                 src={"/fb.svg"}
